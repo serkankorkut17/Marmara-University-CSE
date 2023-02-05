@@ -1,0 +1,556 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'web/style.css' %}">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script>
+    $(window).on("load resize ", function() {
+   var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+   $('.tbl-header').css({'padding-right':scrollWidth});
+   }).resize();
+</script>
+
+<section>
+    <h1>EMPLOYEE</h1>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0">
+        <thead>
+          <tr>
+            <th>TCKN</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Address</th>
+            <th>Birthdate</th>
+            <th>Gender</th>
+            <th>Phone Number</th>
+            <th>Job Starting Date</th>
+            <th>Salary</th>
+            <th>Type Of Employee</th>
+            <th>Department No</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+         {% for emp in employee %}   
+          <tr>
+            <td>{{ emp.tckn }}</td>
+            <td>{{ emp.firstname }}</td>
+            <td>{{ emp.lastname }}</td>
+            <td>{{ emp.address }}</td>
+            <td>{{ emp.birthdate }}</td>
+            <td>{{ emp.gender }}</td>
+            <td>{{ emp.phonenumber }}</td>
+            <td>{{ emp.startingdate }}</td>
+            <td>{{ emp.salary }}</td>
+            <td>{{ emp.employeetype }}</td>
+            <td>{{ emp.departmentno.dno  }}</td>
+          </tr>
+         {% endfor %}
+        </tbody>
+        
+      </table>
+  </section>
+
+  <div class="col-md-12 text-center">
+    <a class="btn btn-success" href="{% url 'admin:index' %}">CLIK FOR UPDATE-DELETE-INSERT</a> 
+  </div>
+  
+
+  <section>
+    <h1>WHITE COLLAR EMPLOYEE</h1>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0">
+        <thead>
+          <tr>
+            <th>TCKN</th>
+            <th>Graduation Major</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+         {% for w in w_employee %}   
+          <tr>
+            <td>{{ w.tckn.tckn }}</td>
+            <td>{{ w.gradutionmajor }}</td>
+          </tr>
+         {% endfor %}
+        </tbody>
+        
+      </table>
+  </section>
+
+  <div class="col-md-12 text-center">
+    <a class="btn btn-success" href="{% url 'admin:index' %}">CLIK FOR UPDATE-DELETE-INSERT</a> 
+  </div>
+
+
+  <section>
+    <h1>BLUE COLLAR EMPLOYEE</h1>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0">
+        <thead>
+          <tr>
+            <th>TCKN</th>
+            <th>Seniority</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+         {% for b in b_employee %}   
+          <tr>
+            <td>{{ b.tckn.tckn }}</td>
+            <td>{{ b.seniority }}</td>
+          </tr>
+         {% endfor %}
+        </tbody>
+        
+      </table>
+  </section>
+
+  <div class="col-md-12 text-center">
+    <a class="btn btn-success" href="{% url 'admin:index' %}">CLIK FOR UPDATE-DELETE-INSERT</a> 
+  </div>
+
+
+  <section>
+    <h1>CUSTOMER</h1>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Customer ID</th>
+            <th>Contact Person Name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Shipping Address</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+         {% for customer in customers %}   
+          <tr>
+            <td>{{ customer.customerid}}</td>
+            <td>{{ customer.contactpersonname }}</td>
+            <td>{{ customer.phonenumber }}</td>
+            <td>{{ customer.email }}</td>
+            <td>{{ customer.shippingaddress }}</td>
+          </tr>
+         {% endfor %}
+        </tbody>
+        
+      </table>
+  </section>
+
+  <div class="col-md-12 text-center">
+    <a class="btn btn-success" href="{% url 'admin:index' %}">CLIK FOR UPDATE-DELETE-INSERT</a> 
+  </div>
+
+  <section>
+    <h1>CUSTOMER ORDER</h1>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Order NO</th>
+            <th>Customer ID</th>
+            <th>Product ID</th>
+            <th>Order Info</th>
+            <th>Quantity</th>
+            <th>Order Date</th>
+            <th>Order Status</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+         {% for order in customer_order %}   
+          <tr>
+            <td>{{ order.orderno }}</td>
+            <td>{{ order.customerid.customerid }}</td>
+            <td>{{ order.productid.productid }}</td>
+            <td>{{ order.orderinfo }}</td>
+            <td>{{ order.quantity }}</td>
+            <td>{{ order.datesold }}</td>
+            <td>{{ order.isplaced }}</td>
+          </tr>
+         {% endfor %}
+        </tbody>
+        
+      </table>
+  </section>
+
+  <div class="col-md-12 text-center">
+    <a class="btn btn-success" href="{% url 'admin:index' %}">CLIK FOR UPDATE-DELETE-INSERT</a> 
+  </div>
+
+
+  <section>
+    <h1>DEPARTMENT</h1>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Department Number</th>
+            <th>Dpeartmen Name</th>
+            <th>Number Of Employees</th>
+            <th>Department Manager TCKN </th>
+            <th>Factory ID</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+         {% for department in departments %}   
+          <tr>
+            <td>{{ department.dno}}</td>
+            <td>{{ department.dfield}}</td>
+            <td>{{ department.noofemployees}}</td>
+            <td>{{ department.managertckn.tckn}}</td>
+            <td>{{ department.factoryid.traderegistrationnumber}}</td>
+          </tr>
+         {% endfor %}
+        </tbody>
+        
+      </table>
+  </section>
+
+  <div class="col-md-12 text-center">
+    <a class="btn btn-success" href="{% url 'admin:index' %}">CLIK FOR UPDATE-DELETE-INSERT</a> 
+  </div>
+
+
+
+  <section>
+    <h1>FACTORY</h1>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Trade Registration Number</th>
+            <th>Factory Name</th>
+            <th>Address</th>
+            <th>Phone Number </th>
+            <th>Fax Number</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+         {% for factory in factories %}   
+          <tr>
+            <td>{{ factory.traderegistrationnumber}}</td>
+            <td>{{ factory.factoryname}}</td>
+            <td>{{ factory.address}}</td>
+            <td>{{ factory.phonenumber}}</td>
+            <td>{{ factory.fax}}</td>
+          </tr>
+         {% endfor %}
+        </tbody>
+        
+      </table>
+  </section>
+
+  <div class="col-md-12 text-center">
+    <a class="btn btn-success" href="{% url 'admin:index' %}">CLIK FOR UPDATE-DELETE-INSERT</a> 
+  </div>
+
+
+  <section>
+    <h1>FACTORY PRODUCT</h1>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Trade Registration Number</th>
+            <th>Product ID</th>
+            <th>Quantity </th>
+            <th>Production Date</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+         {% for product in factory_products %}   
+          <tr>
+            <td>{{ product.id}}</td>
+            <td>{{ product.traderegistrationnumber.traderegistrationnumber}}</td>
+            <td>{{ product.productid.productid}}</td>
+            <td>{{ product.quantity}}</td>
+            <td>{{ product.productiondate}}</td>
+          </tr>
+         {% endfor %}
+        </tbody>
+        
+      </table>
+  </section>
+
+  <div class="col-md-12 text-center">
+    <a class="btn btn-success" href="{% url 'admin:index' %}">CLIK FOR UPDATE-DELETE-INSERT</a> 
+  </div>
+
+
+  <section>
+    <h1>ITEM</h1>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Item Name</th>
+            <th>Price </th>
+            <th>Company ID</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+         {% for item in items %}   
+          <tr>
+            <td>{{ item.itemid }}</td>
+            <td>{{ item.itemtype }}</td>
+            <td>{{ item.unitprice }}</td>
+            <td>{{ item.companyid.companyid }}</td>
+          </tr>
+         {% endfor %}
+        </tbody>
+        
+      </table>
+  </section>
+
+  <div class="col-md-12 text-center">
+    <a class="btn btn-success" href="{% url 'admin:index' %}">CLIK FOR UPDATE-DELETE-INSERT</a> 
+  </div>
+
+
+
+  <section>
+    <h1>SUPPLIER COMPANY</h1>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Company Name</th>
+            <th>Adress </th>
+            <th>Phone Number</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+         {% for sup in sup_companies %}   
+          <tr>
+            <td>{{ sup.companyid }}</td>
+            <td>{{ sup.companyname }}</td>
+            <td>{{ sup.address }}</td>
+            <td>{{ sup.phonenumber }}</td>
+          </tr>
+         {% endfor %}
+        </tbody>
+        
+      </table>
+  </section>
+
+  <div class="col-md-12 text-center">
+    <a class="btn btn-success" href="{% url 'admin:index' %}">CLIK FOR UPDATE-DELETE-INSERT</a> 
+  </div>
+
+
+  <section>
+    <h1>SUPPLIER RECORD</h1>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Supply Number</th>
+            <th>Item ID</th>
+            <th>Factory Trade Registration Number </th>
+            <th>Quantity</th>
+            <th>Supply Date</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+         {% for supr in sup_records %}   
+          <tr>
+            <td>{{ supr.supplyno }}</td>
+            <td>{{ supr.itemid.itemid  }}</td>
+            <td>{{ supr.factorytraderegistrationnumber.traderegistrationnumber   }}</td>
+            <td>{{ supr.quantity  }}</td>
+            <td>{{ supr.supplydate  }}</td>
+          </tr>
+         {% endfor %}
+        </tbody>
+        
+      </table>
+  </section>
+
+  <div class="col-md-12 text-center">
+    <a class="btn btn-success" href="{% url 'admin:index' %}">CLIK FOR UPDATE-DELETE-INSERT</a> 
+  </div>
+
+
+  <section>
+    <h1>UPS PRODUCT</h1>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Product Price </th>
+            <th>Stock</th>
+            <th>Energy Saving Mode</th>
+            <th>Conversion Techology </th>
+            <th>Standart</th>
+            <th>Product Type</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+         {% for ups in ups_products %}   
+          <tr>
+            <td>{{ ups.productid }}</td>
+            <td>{{ ups.productname  }}</td>
+            <td>{{ ups.productprice  }}</td>
+            <td>{{ ups.stock  }}</td>
+            <td>{{ ups.engerysavingmode  }}</td>
+            <td>{{ ups.conversiontechnology  }}</td>
+            <td>{{ ups.standart  }}</td>
+            <td>{{ ups.producttype  }}</td>
+          </tr>
+         {% endfor %}
+        </tbody>
+        
+      </table>
+  </section>
+
+  <div class="col-md-12 text-center">
+    <a class="btn btn-success" href="{% url 'admin:index' %}">CLIK FOR UPDATE-DELETE-INSERT</a> 
+  </div>
+
+
+  <section>
+    <h1>ONE ONE PHASE</h1>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Product ID</th>
+            <th>Frequency Converter Hz</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+         {% for o_o in o_o_phase %}   
+          <tr>
+            <td>{{ o_o.productid.productid }}</td>
+            <td>{{ o_o.frequencyconverterhz }}</td>
+          </tr>
+         {% endfor %}
+        </tbody>
+        
+      </table>
+  </section>
+
+  <div class="col-md-12 text-center">
+    <a class="btn btn-success" href="{% url 'admin:index' %}">CLIK FOR UPDATE-DELETE-INSERT</a> 
+  </div>
+
+  <section>
+    <h1>THREE ONE PHASE</h1>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Product ID</th>
+            <th>Input Power Factor</th>
+            <th>Input Voltage Range</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+         {% for t_o in t_o_phase %}   
+          <tr>
+            <td>{{ t_o.productid.productid }}</td>
+            <td>{{ t_o.inputpowerfactor }}</td>
+            <td>{{ t_o.inputvoltagerange }}</td>
+          </tr>
+         {% endfor %}
+        </tbody>
+        
+      </table>
+  </section>
+
+  <div class="col-md-12 text-center">
+    <a class="btn btn-success" href="{% url 'admin:index' %}">CLIK FOR UPDATE-DELETE-INSERT</a> 
+  </div>
+
+
+  <section>
+    <h1>THREE THREE PHASE</h1>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Product ID</th>
+            <th>Harmonic Distortion Level</th>
+            <th>Optinal Part</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+         {% for t_t in t_t_phase %}   
+          <tr>
+            <td>{{ t_t.productid.productid }}</td>
+            <td>{{ t_t.harmonicdistortionlevel }}</td>
+            <td>{{ t_t.optinalpart }}</td>
+          </tr>
+         {% endfor %}
+        </tbody>
+        
+      </table>
+  </section>
+
+  <div class="col-md-12 text-center">
+    <a class="btn btn-success" href="{% url 'admin:index' %}">CLIK FOR UPDATE-DELETE-INSERT</a> 
+  </div>
