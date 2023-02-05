@@ -2,14 +2,14 @@
 
 # **CSE3063 Object Oriented Software Design Project Fall 2022 <br>Group 6** 
 
-<img src="/icons/man.png" width="150">
+<img src="/CSE3063-Object-Oriented-Software-Design/icons/man.png" width="150">
 
 <br>
 
 ### **Group Members**
 <br>
 
-|<img src="/icons/card.png" width="30">   | Name & Surname  |<img src="/icons/github.png" width="30">|
+|<img src="/CSE3063-Object-Oriented-Software-Design/icons/card.png" width="30">   | Name & Surname  |<img src="/CSE3063-Object-Oriented-Software-Design/icons/github.png" width="30">|
 |---|---|---|
 |150119516   |**İsmail ÖKSÜZ**   |<a href="https://github.com/ismailoksuz/">ismailoksuz</a>|
 |150119766   |**Emre SAĞIROĞLU**   |<a href="https://github.com/emresagiroglu/">emresagiroglu</a>|
@@ -32,7 +32,7 @@
 
 |Iteration 1 (Java)|Iteration 2 (Java)|Iteration 3 (Python)|
 |---|---|---|
-|<img align="center" src=/icons/completed.png height="60"/>|<img align="center" src=/icons/completed.png height="60"/>|<img align="center" src=/icons/completed.png height="60"/>|
+|<img align="center" src=/CSE3063-Object-Oriented-Software-Design/icons/completed.png height="60"/>|<img align="center" src=/CSE3063-Object-Oriented-Software-Design/icons/completed.png height="60"/>|<img align="center" src=/CSE3063-Object-Oriented-Software-Design/icons/completed.png height="60"/>|
 
 </div>
 <div align="center">
@@ -40,11 +40,11 @@
 
 ### **Additional Links**
 <h1 align="center">
-<a href="https://discord.gg/fa8y4F65v9" target="blank"><img align="center" alt="Discord" src=/icons/discord.png height="70"/></a>
-<a href="https://docs.google.com/" target="blank"><img align="center" alt="Google Docs" src=/icons/google-docs.png height="70"/></a>
-<a href="https://app.diagrams.net//" target="blank"><img align="center" alt="Draw IO" src=/icons/diagram.png height="70"/></a>
-<a href="https://doodle.com/en//" target="blank"><img align="center" alt="Doodle" src=/icons/meeting.png height="70"/></a>
-<a href="https://trello.com/b/Bx3LmrmP/cse3063f22p1grp6iteration-3" target="blank"><img align="center" alt="Kanban Board" src=/icons/trello.png height="70"/></a>
+<a href="https://discord.gg/fa8y4F65v9" target="blank"><img align="center" alt="Discord" src=/CSE3063-Object-Oriented-Software-Design/icons/discord.png height="70"/></a>
+<a href="https://docs.google.com/" target="blank"><img align="center" alt="Google Docs" src=/CSE3063-Object-Oriented-Software-Design/icons/google-docs.png height="70"/></a>
+<a href="https://app.diagrams.net//" target="blank"><img align="center" alt="Draw IO" src=/CSE3063-Object-Oriented-Software-Design/icons/diagram.png height="70"/></a>
+<a href="https://doodle.com/en//" target="blank"><img align="center" alt="Doodle" src=/CSE3063-Object-Oriented-Software-Design/icons/meeting.png height="70"/></a>
+<a href="https://trello.com/b/Bx3LmrmP/cse3063f22p1grp6iteration-3" target="blank"><img align="center" alt="Kanban Board" src=/CSE3063-Object-Oriented-Software-Design/icons/trello.png height="70"/></a>
 </h1>
 
 
