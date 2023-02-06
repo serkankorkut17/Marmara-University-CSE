@@ -24,14 +24,14 @@
 <table style="width: 100%; border: none;" cellspacing="0" cellpadding="0" border="0">
   <tr>
     <td><a href="https://github.com/serkankorkut17/"><img src="/icons/user.png" width="50"></a></td>
-    <td rowspan="3">Serkan Korkut</td>
+    <td>Serkan Korkut</td>
   </tr>
   <tr>
     <td><a href="mailto:srknkrktgs@gmail.com"><img src="/icons/email.png" width="50"></a></td>
-    <td rowspan="3">Serkan Korkut</td>
+    <td>Serkan Korkut</td>
   </tr>
   <tr>
     <td><a href="https://www.linkedin.com/in/serkankorkut17/"><img src="/icons/linkedin.png" width="50"></a></a></td>
-    <td rowspan="3">Serkan Korkut</td>
+    <td>Serkan Korkut</td>
   </tr>
 </table>
