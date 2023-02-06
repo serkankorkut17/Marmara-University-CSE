@@ -1,5 +1,5 @@
 <div align="center">
-    <a href="https://www.marmara.edu.tr" target="blank"><img align="center" alt="Discord" src="/icons/Marun_logo1.png" height="400"/></a>
+    <a href="https://www.marmara.edu.tr" target="blank"><img align="center" alt="Marmara University" src="/icons/Marun_logo1.png" height="400"/></a>
     
   <br>
     
@@ -8,15 +8,15 @@
 
 <table align="center">
   <tr>
-    <td><a href="https://github.com/serkankorkut17/"><img src="/icons/user.png" width="100"></a></td>
+    <td><a href="https://github.com/serkankorkut17/"><img align="center" alt="Name&Surname" src="/icons/user.png" width="100"></a></td>
     <td>Serkan Korkut</td>
   </tr>
   <tr>
-    <td><a href="mailto:srknkrktgs@gmail.com"><img src="/icons/email.png" width="100"></a></td>
+    <td><a href="mailto:srknkrktgs@gmail.com"><img align="center" alt="EMail" src="/icons/email.png" width="100"></a></td>
     <td>srknkrktgs@gmail.com</td>
   </tr>
   <tr>
-    <td><a href="https://www.linkedin.com/in/serkankorkut17/"><img src="/icons/linkedin.png" width="100"></a></a></td>
+    <td><a href="https://www.linkedin.com/in/serkankorkut17/"><img align="center" alt="LinkedIn" src="/icons/linkedin.png" width="100"></a></a></td>
     <td>My LinkedIn</td>
   </tr>
 </table>
