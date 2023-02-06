@@ -8,8 +8,8 @@
 </div>
 <div>
     <ul>
-        <li><img src="/icons/user.png" width="100"><a href="https://github.com/serkankorkut17/">Serkan Korkut</a></li>
-        <li><img src="/icons/mail.png" width="100"><a href="srknkrktgs@gmail.com">srknkrktgs@gmail.com</a></li>
-        <li><img src="/icons/link.png" width="100"><a href="https://www.linkedin.com/in/serkankorkut17/">LinkedIn</a></li>
+        <li><div><img src="/icons/user.png" width="50"><a href="https://github.com/serkankorkut17/">Serkan Korkut</a></div></li>
+        <li><div><img src="/icons/mail.png" width="50"><a href="srknkrktgs@gmail.com">srknkrktgs@gmail.com</a></div></li>
+        <li><div><img src="/icons/link.png" width="50"><a href="https://www.linkedin.com/in/serkankorkut17/">LinkedIn</a></div></li>
     </ul>
 </div>
