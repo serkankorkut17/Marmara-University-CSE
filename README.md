@@ -8,15 +8,15 @@
 
 <table align="center">
   <tr>
-    <td><a href="https://github.com/serkankorkut17/"><img src="/icons/user.png" width="50"></a></td>
+    <td><a href="https://github.com/serkankorkut17/"><img src="/icons/user.png" width="100"></a></td>
     <td>Serkan Korkut</td>
   </tr>
   <tr>
-    <td><a href="mailto:srknkrktgs@gmail.com"><img src="/icons/email.png" width="50"></a></td>
+    <td><a href="mailto:srknkrktgs@gmail.com"><img src="/icons/email.png" width="100"></a></td>
     <td>srknkrktgs@gmail.com</td>
   </tr>
   <tr>
-    <td><a href="https://www.linkedin.com/in/serkankorkut17/"><img src="/icons/linkedin.png" width="50"></a></a></td>
+    <td><a href="https://www.linkedin.com/in/serkankorkut17/"><img src="/icons/linkedin.png" width="100"></a></a></td>
     <td>My LinkedIn</td>
   </tr>
 </table>
