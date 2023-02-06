@@ -1,5 +1,5 @@
 <div align="center" >
-    <a href="https://www.marmara.edu.tr" target="blank"><img align="center" alt="Discord" src="/icons/Marunlogo1.png" height="400"/></a>
+    <a href="https://www.marmara.edu.tr" target="blank"><img align="center" alt="Discord" src="/icons/Marun_logo1.png" height="400"/></a>
     
   <br>
     
