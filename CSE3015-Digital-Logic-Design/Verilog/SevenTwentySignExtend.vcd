@@ -1,0 +1,49 @@
+$date
+	Wed Dec 28 01:01:42 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module SevenTwentySignExtend_tb $end
+$var wire 20 ! ExtendedA [19:0] $end
+$var reg 7 " A [6:0] $end
+$scope module uut $end
+$var wire 7 # A [6:0] $end
+$var wire 20 $ ExtendedA [19:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1 $
+b1 #
+b1 "
+b1 !
+$end
+#20
+b11111111111111000000 !
+b11111111111111000000 $
+b1000000 "
+b1000000 #
+#40
+b11111111111111111111 !
+b11111111111111111111 $
+b1111111 "
+b1111111 #
+#60
+b11111 !
+b11111 $
+b11111 "
+b11111 #
+#80
+b11111111111111010101 !
+b11111111111111010101 $
+b1010101 "
+b1010101 #
+#100

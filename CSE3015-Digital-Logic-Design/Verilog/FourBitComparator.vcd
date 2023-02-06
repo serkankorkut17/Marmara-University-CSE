@@ -1,0 +1,225 @@
+$date
+	Sun Jan 01 20:43:48 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module FourBitComparator_tb $end
+$var wire 1 ! Lt $end
+$var wire 1 " Gt $end
+$var wire 1 # Eq $end
+$var reg 4 $ A [3:0] $end
+$var reg 4 % B [3:0] $end
+$var reg 1 & EqIn $end
+$var reg 1 ' GtIn $end
+$var reg 1 ( LtIn $end
+$scope module uut $end
+$var wire 4 ) A [3:0] $end
+$var wire 4 * B [3:0] $end
+$var wire 1 & EqIn $end
+$var wire 1 ' GtIn $end
+$var wire 1 ( LtIn $end
+$var wire 1 + LtIn3 $end
+$var wire 1 , LtIn2 $end
+$var wire 1 - LtIn1 $end
+$var wire 1 ! Lt $end
+$var wire 1 . GtIn3 $end
+$var wire 1 / GtIn2 $end
+$var wire 1 0 GtIn1 $end
+$var wire 1 " Gt $end
+$var wire 1 1 EqIn3 $end
+$var wire 1 2 EqIn2 $end
+$var wire 1 3 EqIn1 $end
+$var wire 1 # Eq $end
+$scope module fc1 $end
+$var wire 1 4 A $end
+$var wire 1 5 B $end
+$var wire 1 3 Eq $end
+$var wire 1 & EqIn $end
+$var wire 1 0 Gt $end
+$var wire 1 ' GtIn $end
+$var wire 1 - Lt $end
+$var wire 1 ( LtIn $end
+$var wire 1 6 and1 $end
+$var wire 1 7 and2 $end
+$var wire 1 8 and3 $end
+$var wire 1 9 and4 $end
+$var wire 1 : notA $end
+$var wire 1 ; notB $end
+$upscope $end
+$scope module fc2 $end
+$var wire 1 < A $end
+$var wire 1 = B $end
+$var wire 1 2 Eq $end
+$var wire 1 3 EqIn $end
+$var wire 1 / Gt $end
+$var wire 1 0 GtIn $end
+$var wire 1 , Lt $end
+$var wire 1 - LtIn $end
+$var wire 1 > and1 $end
+$var wire 1 ? and2 $end
+$var wire 1 @ and3 $end
+$var wire 1 A and4 $end
+$var wire 1 B notA $end
+$var wire 1 C notB $end
+$upscope $end
+$scope module fc3 $end
+$var wire 1 D A $end
+$var wire 1 E B $end
+$var wire 1 1 Eq $end
+$var wire 1 2 EqIn $end
+$var wire 1 . Gt $end
+$var wire 1 / GtIn $end
+$var wire 1 + Lt $end
+$var wire 1 , LtIn $end
+$var wire 1 F and1 $end
+$var wire 1 G and2 $end
+$var wire 1 H and3 $end
+$var wire 1 I and4 $end
+$var wire 1 J notA $end
+$var wire 1 K notB $end
+$upscope $end
+$scope module fc4 $end
+$var wire 1 L A $end
+$var wire 1 M B $end
+$var wire 1 # Eq $end
+$var wire 1 1 EqIn $end
+$var wire 1 " Gt $end
+$var wire 1 . GtIn $end
+$var wire 1 ! Lt $end
+$var wire 1 + LtIn $end
+$var wire 1 N and1 $end
+$var wire 1 O and2 $end
+$var wire 1 P and3 $end
+$var wire 1 Q and4 $end
+$var wire 1 R notA $end
+$var wire 1 S notB $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+1S
+1R
+1Q
+0P
+0O
+0N
+0M
+0L
+1K
+1J
+1I
+0H
+0G
+0F
+0E
+0D
+1C
+1B
+1A
+0@
+0?
+0>
+0=
+0<
+1;
+1:
+19
+08
+07
+06
+05
+04
+13
+12
+11
+00
+0/
+0.
+0-
+0,
+0+
+b0 *
+b0 )
+0(
+0'
+1&
+b0 %
+b0 $
+1#
+0"
+0!
+$end
+#20
+0#
+0Q
+1"
+1O
+0R
+1L
+b1 $
+b1 )
+#40
+1!
+1N
+0"
+0O
+0S
+1R
+1M
+0L
+b1 %
+b1 *
+b0 $
+b0 )
+#60
+01
+0I
+02
+0A
+0"
+0O
+03
+1+
+1S
+0N
+0R
+09
+1,
+0M
+1L
+1-
+b0 %
+b0 *
+b1 $
+b1 )
+0&
+1(
+#80
+1"
+0!
+1.
+0+
+0S
+1R
+1/
+0,
+1M
+0L
+10
+0-
+b1 %
+b1 *
+b0 $
+b0 )
+1'
+0(
+#100

@@ -1,0 +1,97 @@
+$date
+	Tue Dec 27 19:53:35 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module FullComparator_tb $end
+$var wire 1 ! Lt $end
+$var wire 1 " Gt $end
+$var wire 1 # Eq $end
+$var reg 1 $ A $end
+$var reg 1 % B $end
+$var reg 1 & EqIn $end
+$var reg 1 ' GtIn $end
+$var reg 1 ( LtIn $end
+$scope module uut $end
+$var wire 1 $ A $end
+$var wire 1 % B $end
+$var wire 1 # Eq $end
+$var wire 1 & EqIn $end
+$var wire 1 " Gt $end
+$var wire 1 ' GtIn $end
+$var wire 1 ! Lt $end
+$var wire 1 ( LtIn $end
+$var wire 1 ) and1 $end
+$var wire 1 * and2 $end
+$var wire 1 + and3 $end
+$var wire 1 , and4 $end
+$var wire 1 - notA $end
+$var wire 1 . notB $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+1.
+0-
+0,
+0+
+0*
+0)
+1(
+0'
+0&
+0%
+1$
+0#
+0"
+1!
+$end
+#20
+0.
+1-
+1"
+0!
+1%
+0$
+1'
+0(
+#40
+1#
+1,
+1.
+0"
+0%
+1&
+0'
+#60
+0#
+0,
+1"
+1*
+0-
+1$
+#80
+1!
+1)
+0"
+0*
+0.
+1-
+1%
+0$
+#100
+0!
+0)
+1#
+1+
+0-
+1$
+#120

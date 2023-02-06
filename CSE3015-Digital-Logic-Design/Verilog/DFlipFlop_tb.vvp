@@ -1,0 +1,186 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001b36de2d450 .scope module, "DFlipFlop_tb" "DFlipFlop_tb" 2 3;
+ .timescale 0 0;
+v000001b36de32660_0 .var "Clock", 0 0;
+v000001b36de31bc0_0 .var "D", 0 0;
+v000001b36de319e0_0 .var "Enable", 0 0;
+v000001b36de31a80_0 .net "Q", 0 0, L_000001b36de33250;  1 drivers
+S_000001b36de02d60 .scope module, "uut" "DFlipFlop" 2 10, 3 3 0, S_000001b36de2d450;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "D";
+    .port_info 1 /INPUT 1 "Clock";
+    .port_info 2 /INPUT 1 "Enable";
+    .port_info 3 /OUTPUT 1 "Q";
+L_000001b36de3da20 .functor NOT 1, v000001b36de32660_0, C4<0>, C4<0>, C4<0>;
+L_000001b36de33250 .functor BUFZ 1, L_000001b36de32ca0, C4<0>, C4<0>, C4<0>;
+v000001b36de31d00_0 .net "Clock", 0 0, v000001b36de32660_0;  1 drivers
+v000001b36de32160_0 .net "D", 0 0, v000001b36de31bc0_0;  1 drivers
+v000001b36de320c0_0 .net "Enable", 0 0, v000001b36de319e0_0;  1 drivers
+v000001b36de31da0_0 .net "Q", 0 0, L_000001b36de33250;  alias, 1 drivers
+v000001b36de323e0_0 .net "dlOutput1", 0 0, L_000001b36de32c30;  1 drivers
+v000001b36de32340_0 .net "dlOutput2", 0 0, L_000001b36de32ca0;  1 drivers
+v000001b36de32480_0 .var "muxOutput", 0 0;
+v000001b36de325c0_0 .net "notClock", 0 0, L_000001b36de3da20;  1 drivers
+E_000001b36de286a0 .event anyedge, v000001b36de320c0_0, v000001b36de32160_0, v000001b36de318a0_0;
+S_000001b36de02ef0 .scope module, "dl1" "DLatch" 3 21, 4 1 0, S_000001b36de02d60;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "D";
+    .port_info 1 /INPUT 1 "Clock";
+    .port_info 2 /OUTPUT 1 "Q";
+L_000001b36de3d860 .functor NOT 1, v000001b36de32480_0, C4<0>, C4<0>, C4<0>;
+L_000001b36de3d8d0 .functor AND 1, L_000001b36de3d860, L_000001b36de3da20, C4<1>, C4<1>;
+L_000001b36de3d940 .functor AND 1, v000001b36de32480_0, L_000001b36de3da20, C4<1>, C4<1>;
+L_000001b36de3da90 .functor NOR 1, L_000001b36de3d8d0, L_000001b36de32f40, C4<0>, C4<0>;
+L_000001b36de32f40 .functor NOR 1, L_000001b36de3d940, L_000001b36de3da90, C4<0>, C4<0>;
+L_000001b36de32c30 .functor BUFZ 1, L_000001b36de3da90, C4<0>, C4<0>, C4<0>;
+v000001b36de291d0_0 .net "Clock", 0 0, L_000001b36de3da20;  alias, 1 drivers
+v000001b36de03080_0 .net "D", 0 0, v000001b36de32480_0;  1 drivers
+v000001b36de03120_0 .net "Q", 0 0, L_000001b36de32c30;  alias, 1 drivers
+v000001b36de31940_0 .net "and1", 0 0, L_000001b36de3d8d0;  1 drivers
+v000001b36de32200_0 .net "and2", 0 0, L_000001b36de3d940;  1 drivers
+v000001b36de32520_0 .net "nor1", 0 0, L_000001b36de3da90;  1 drivers
+v000001b36de31b20_0 .net "nor2", 0 0, L_000001b36de32f40;  1 drivers
+v000001b36de322a0_0 .net "notD", 0 0, L_000001b36de3d860;  1 drivers
+S_000001b36ddebd30 .scope module, "dl2" "DLatch" 3 22, 4 1 0, S_000001b36de02d60;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "D";
+    .port_info 1 /INPUT 1 "Clock";
+    .port_info 2 /OUTPUT 1 "Q";
+L_000001b36de333a0 .functor NOT 1, L_000001b36de32c30, C4<0>, C4<0>, C4<0>;
+L_000001b36de32ed0 .functor AND 1, L_000001b36de333a0, v000001b36de32660_0, C4<1>, C4<1>;
+L_000001b36de331e0 .functor AND 1, L_000001b36de32c30, v000001b36de32660_0, C4<1>, C4<1>;
+L_000001b36de33410 .functor NOR 1, L_000001b36de32ed0, L_000001b36de33480, C4<0>, C4<0>;
+L_000001b36de33480 .functor NOR 1, L_000001b36de331e0, L_000001b36de33410, C4<0>, C4<0>;
+L_000001b36de32ca0 .functor BUFZ 1, L_000001b36de33410, C4<0>, C4<0>, C4<0>;
+v000001b36de32700_0 .net "Clock", 0 0, v000001b36de32660_0;  alias, 1 drivers
+v000001b36de31f80_0 .net "D", 0 0, L_000001b36de32c30;  alias, 1 drivers
+v000001b36de318a0_0 .net "Q", 0 0, L_000001b36de32ca0;  alias, 1 drivers
+v000001b36de31e40_0 .net "and1", 0 0, L_000001b36de32ed0;  1 drivers
+v000001b36de31ee0_0 .net "and2", 0 0, L_000001b36de331e0;  1 drivers
+v000001b36de31c60_0 .net "nor1", 0 0, L_000001b36de33410;  1 drivers
+v000001b36de327a0_0 .net "nor2", 0 0, L_000001b36de33480;  1 drivers
+v000001b36de32020_0 .net "notD", 0 0, L_000001b36de333a0;  1 drivers
+    .scope S_000001b36de02d60;
+T_0 ;
+    %wait E_000001b36de286a0;
+    %load/vec4 v000001b36de320c0_0;
+    %dup/vec4;
+    %pushi/vec4 0, 0, 1;
+    %cmp/u;
+    %jmp/1 T_0.0, 6;
+    %dup/vec4;
+    %pushi/vec4 1, 0, 1;
+    %cmp/u;
+    %jmp/1 T_0.1, 6;
+    %jmp T_0.2;
+T_0.0 ;
+    %load/vec4 v000001b36de32340_0;
+    %assign/vec4 v000001b36de32480_0, 0;
+    %jmp T_0.2;
+T_0.1 ;
+    %load/vec4 v000001b36de32160_0;
+    %assign/vec4 v000001b36de32480_0, 0;
+    %jmp T_0.2;
+T_0.2 ;
+    %pop/vec4 1;
+    %jmp T_0;
+    .thread T_0, $push;
+    .scope S_000001b36de2d450;
+T_1 ;
+    %vpi_call 2 13 "$dumpfile", "DFlipFlop.vcd" {0 0 0};
+    %vpi_call 2 14 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001b36de2d450 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001b36de31bc0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001b36de32660_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001b36de319e0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001b36de31bc0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001b36de32660_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001b36de319e0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001b36de31bc0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001b36de32660_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001b36de319e0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001b36de31bc0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001b36de32660_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001b36de319e0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001b36de31bc0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001b36de32660_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001b36de319e0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001b36de31bc0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001b36de32660_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001b36de319e0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001b36de31bc0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001b36de32660_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001b36de319e0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001b36de31bc0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001b36de32660_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001b36de319e0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001b36de31bc0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001b36de32660_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001b36de319e0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001b36de31bc0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001b36de32660_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001b36de319e0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001b36de31bc0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001b36de32660_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001b36de319e0_0, 0, 1;
+    %delay 20, 0;
+    %vpi_call 2 71 "$display", "test completed" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    ".\DFlipFlop_tb.v";
+    "./DFlipFlop.v";
+    "./DLatch.v";

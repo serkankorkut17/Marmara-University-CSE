@@ -1,0 +1,139 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000021e895d7840 .scope module, "FullComparator_tb" "FullComparator_tb" 2 4;
+ .timescale -9 -9;
+v0000021e895e21a0_0 .var "A", 0 0;
+v0000021e895e2ba0_0 .var "B", 0 0;
+v0000021e895e2240_0 .net "Eq", 0 0, L_0000021e8963f160;  1 drivers
+v0000021e895e2600_0 .var "EqIn", 0 0;
+v0000021e895e22e0_0 .net "Gt", 0 0, L_0000021e8963ed70;  1 drivers
+v0000021e895e2380_0 .var "GtIn", 0 0;
+v0000021e895e2c40_0 .net "Lt", 0 0, L_0000021e8963f780;  1 drivers
+v0000021e895e2ce0_0 .var "LtIn", 0 0;
+S_0000021e8952d590 .scope module, "uut" "FullComparator" 2 14, 3 2 0, S_0000021e895d7840;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "LtIn";
+    .port_info 1 /INPUT 1 "GtIn";
+    .port_info 2 /INPUT 1 "EqIn";
+    .port_info 3 /INPUT 1 "A";
+    .port_info 4 /INPUT 1 "B";
+    .port_info 5 /OUTPUT 1 "Lt";
+    .port_info 6 /OUTPUT 1 "Gt";
+    .port_info 7 /OUTPUT 1 "Eq";
+L_0000021e8952b1f0 .functor NOT 1, v0000021e895e21a0_0, C4<0>, C4<0>, C4<0>;
+L_0000021e8952ad90 .functor NOT 1, v0000021e895e2ba0_0, C4<0>, C4<0>, C4<0>;
+L_0000021e8952b030 .functor AND 1, v0000021e895e2600_0, L_0000021e8952b1f0, C4<1>, C4<1>;
+L_0000021e8952aee0 .functor AND 1, L_0000021e8952b030, v0000021e895e2ba0_0, C4<1>, C4<1>;
+L_0000021e8952b180 .functor AND 1, v0000021e895e2600_0, v0000021e895e21a0_0, C4<1>, C4<1>;
+L_0000021e8952af50 .functor AND 1, L_0000021e8952b180, L_0000021e8952ad90, C4<1>, C4<1>;
+L_0000021e8952abd0 .functor AND 1, v0000021e895e2600_0, v0000021e895e21a0_0, C4<1>, C4<1>;
+L_0000021e8952b0a0 .functor AND 1, L_0000021e8952abd0, v0000021e895e2ba0_0, C4<1>, C4<1>;
+L_0000021e8963ed00 .functor AND 1, v0000021e895e2600_0, L_0000021e8952b1f0, C4<1>, C4<1>;
+L_0000021e8963f240 .functor AND 1, L_0000021e8963ed00, L_0000021e8952ad90, C4<1>, C4<1>;
+L_0000021e8963f780 .functor OR 1, v0000021e895e2ce0_0, L_0000021e8952aee0, C4<0>, C4<0>;
+L_0000021e8963ed70 .functor OR 1, v0000021e895e2380_0, L_0000021e8952af50, C4<0>, C4<0>;
+L_0000021e8963f160 .functor OR 1, L_0000021e8952b0a0, L_0000021e8963f240, C4<0>, C4<0>;
+v0000021e895d79d0_0 .net "A", 0 0, v0000021e895e21a0_0;  1 drivers
+v0000021e895b3140_0 .net "B", 0 0, v0000021e895e2ba0_0;  1 drivers
+v0000021e8952d720_0 .net "Eq", 0 0, L_0000021e8963f160;  alias, 1 drivers
+v0000021e8952d7c0_0 .net "EqIn", 0 0, v0000021e895e2600_0;  1 drivers
+v0000021e895e2560_0 .net "Gt", 0 0, L_0000021e8963ed70;  alias, 1 drivers
+v0000021e895e27e0_0 .net "GtIn", 0 0, v0000021e895e2380_0;  1 drivers
+v0000021e895e2880_0 .net "Lt", 0 0, L_0000021e8963f780;  alias, 1 drivers
+v0000021e895e2e20_0 .net "LtIn", 0 0, v0000021e895e2ce0_0;  1 drivers
+v0000021e895e2a60_0 .net *"_ivl_10", 0 0, L_0000021e8952abd0;  1 drivers
+v0000021e895e2920_0 .net *"_ivl_14", 0 0, L_0000021e8963ed00;  1 drivers
+v0000021e895e1fc0_0 .net *"_ivl_2", 0 0, L_0000021e8952b030;  1 drivers
+v0000021e895e24c0_0 .net *"_ivl_6", 0 0, L_0000021e8952b180;  1 drivers
+v0000021e895e26a0_0 .net "and1", 0 0, L_0000021e8952aee0;  1 drivers
+v0000021e895e29c0_0 .net "and2", 0 0, L_0000021e8952af50;  1 drivers
+v0000021e895e2b00_0 .net "and3", 0 0, L_0000021e8952b0a0;  1 drivers
+v0000021e895e2100_0 .net "and4", 0 0, L_0000021e8963f240;  1 drivers
+v0000021e895e2060_0 .net "notA", 0 0, L_0000021e8952b1f0;  1 drivers
+v0000021e895e2d80_0 .net "notB", 0 0, L_0000021e8952ad90;  1 drivers
+    .scope S_0000021e895d7840;
+T_0 ;
+    %vpi_call 2 17 "$dumpfile", "FullComparator.vcd" {0 0 0};
+    %vpi_call 2 18 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000021e895d7840 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000021e895e2ce0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000021e895e2380_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000021e895e2600_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000021e895e21a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000021e895e2ba0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000021e895e2ce0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000021e895e2380_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000021e895e2600_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000021e895e21a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000021e895e2ba0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000021e895e2ce0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000021e895e2380_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000021e895e2600_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000021e895e21a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000021e895e2ba0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000021e895e2ce0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000021e895e2380_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000021e895e2600_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000021e895e21a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000021e895e2ba0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000021e895e2ce0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000021e895e2380_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000021e895e2600_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000021e895e21a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000021e895e2ba0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000021e895e2ce0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000021e895e2380_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000021e895e2600_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000021e895e21a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000021e895e2ba0_0, 0, 1;
+    %delay 20, 0;
+    %vpi_call 2 62 "$display", "test completed" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    ".\FullComparator_tb.v";
+    "./FullComparator.v";

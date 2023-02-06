@@ -1,0 +1,202 @@
+$date
+	Wed Dec 28 00:12:17 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module FourBitAdder_tb $end
+$var wire 4 ! Sum [3:0] $end
+$var wire 1 " Cout $end
+$var reg 4 # A [3:0] $end
+$var reg 4 $ B [3:0] $end
+$var reg 1 % Cin $end
+$scope module uut $end
+$var wire 4 & A [3:0] $end
+$var wire 4 ' B [3:0] $end
+$var wire 1 % Cin $end
+$var wire 4 ( Sum [3:0] $end
+$var wire 1 ) Cout2 $end
+$var wire 1 * Cout1 $end
+$var wire 1 + Cout0 $end
+$var wire 1 " Cout $end
+$scope module fa1 $end
+$var wire 1 , A $end
+$var wire 1 - B $end
+$var wire 1 % Cin $end
+$var wire 1 + Cout $end
+$var wire 1 . Sum $end
+$var wire 1 / and1 $end
+$var wire 1 0 and2 $end
+$var wire 1 1 xor1 $end
+$upscope $end
+$scope module fa2 $end
+$var wire 1 2 A $end
+$var wire 1 3 B $end
+$var wire 1 + Cin $end
+$var wire 1 * Cout $end
+$var wire 1 4 Sum $end
+$var wire 1 5 and1 $end
+$var wire 1 6 and2 $end
+$var wire 1 7 xor1 $end
+$upscope $end
+$scope module fa3 $end
+$var wire 1 8 A $end
+$var wire 1 9 B $end
+$var wire 1 * Cin $end
+$var wire 1 ) Cout $end
+$var wire 1 : Sum $end
+$var wire 1 ; and1 $end
+$var wire 1 < and2 $end
+$var wire 1 = xor1 $end
+$upscope $end
+$scope module fa4 $end
+$var wire 1 > A $end
+$var wire 1 ? B $end
+$var wire 1 ) Cin $end
+$var wire 1 " Cout $end
+$var wire 1 @ Sum $end
+$var wire 1 A and1 $end
+$var wire 1 B and2 $end
+$var wire 1 C xor1 $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0C
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+02
+11
+00
+0/
+1.
+0-
+1,
+0+
+0*
+0)
+b1 (
+b0 '
+b1 &
+0%
+b0 $
+b1 #
+0"
+b1 !
+$end
+#20
+1:
+1@
+b1111 !
+b1111 (
+14
+1=
+1C
+17
+19
+1?
+12
+b1100 $
+b1100 '
+b11 #
+b11 &
+#40
+0@
+1"
+0:
+1A
+1)
+0.
+b0 !
+b0 (
+04
+1;
+1*
+01
+15
+1+
+10
+1-
+09
+0?
+18
+1>
+b1 $
+b1 '
+b1111 #
+b1111 &
+#60
+14
+1:
+b110 !
+b110 (
+0@
+05
+0)
+0"
+07
+0;
+0A
+0=
+0C
+16
+13
+08
+0>
+b11 $
+b11 '
+b11 #
+b11 &
+#80
+1"
+0:
+1A
+1)
+04
+1;
+15
+1/
+0@
+11
+17
+1+
+1*
+1=
+1C
+00
+06
+b0 !
+b0 (
+0.
+0-
+03
+18
+1>
+b0 $
+b0 '
+b1111 #
+b1111 &
+1%
+#100

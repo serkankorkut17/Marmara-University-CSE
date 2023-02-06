@@ -1,0 +1,534 @@
+$date
+	Wed Dec 28 00:51:29 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module TenBitAdder_tb $end
+$var wire 10 ! Sum [9:0] $end
+$var reg 10 " A [9:0] $end
+$var reg 10 # B [9:0] $end
+$scope module uut $end
+$var wire 10 $ A [9:0] $end
+$var wire 10 % B [9:0] $end
+$var wire 12 & extendedB [11:0] $end
+$var wire 12 ' extendedA [11:0] $end
+$var wire 13 ( Sum1 [12:0] $end
+$var wire 10 ) Sum [9:0] $end
+$var wire 1 * Cout2 $end
+$var wire 1 + Cout1 $end
+$var wire 1 , Cout0 $end
+$scope module fa1 $end
+$var wire 4 - A [3:0] $end
+$var wire 4 . B [3:0] $end
+$var wire 1 / Cin $end
+$var wire 4 0 Sum [3:0] $end
+$var wire 1 1 Cout2 $end
+$var wire 1 2 Cout1 $end
+$var wire 1 3 Cout0 $end
+$var wire 1 , Cout $end
+$scope module fa1 $end
+$var wire 1 4 A $end
+$var wire 1 5 B $end
+$var wire 1 / Cin $end
+$var wire 1 3 Cout $end
+$var wire 1 6 Sum $end
+$var wire 1 7 and1 $end
+$var wire 1 8 and2 $end
+$var wire 1 9 xor1 $end
+$upscope $end
+$scope module fa2 $end
+$var wire 1 : A $end
+$var wire 1 ; B $end
+$var wire 1 3 Cin $end
+$var wire 1 2 Cout $end
+$var wire 1 < Sum $end
+$var wire 1 = and1 $end
+$var wire 1 > and2 $end
+$var wire 1 ? xor1 $end
+$upscope $end
+$scope module fa3 $end
+$var wire 1 @ A $end
+$var wire 1 A B $end
+$var wire 1 2 Cin $end
+$var wire 1 1 Cout $end
+$var wire 1 B Sum $end
+$var wire 1 C and1 $end
+$var wire 1 D and2 $end
+$var wire 1 E xor1 $end
+$upscope $end
+$scope module fa4 $end
+$var wire 1 F A $end
+$var wire 1 G B $end
+$var wire 1 1 Cin $end
+$var wire 1 , Cout $end
+$var wire 1 H Sum $end
+$var wire 1 I and1 $end
+$var wire 1 J and2 $end
+$var wire 1 K xor1 $end
+$upscope $end
+$upscope $end
+$scope module fa2 $end
+$var wire 4 L A [3:0] $end
+$var wire 4 M B [3:0] $end
+$var wire 1 , Cin $end
+$var wire 4 N Sum [3:0] $end
+$var wire 1 O Cout2 $end
+$var wire 1 P Cout1 $end
+$var wire 1 Q Cout0 $end
+$var wire 1 + Cout $end
+$scope module fa1 $end
+$var wire 1 R A $end
+$var wire 1 S B $end
+$var wire 1 , Cin $end
+$var wire 1 Q Cout $end
+$var wire 1 T Sum $end
+$var wire 1 U and1 $end
+$var wire 1 V and2 $end
+$var wire 1 W xor1 $end
+$upscope $end
+$scope module fa2 $end
+$var wire 1 X A $end
+$var wire 1 Y B $end
+$var wire 1 Q Cin $end
+$var wire 1 P Cout $end
+$var wire 1 Z Sum $end
+$var wire 1 [ and1 $end
+$var wire 1 \ and2 $end
+$var wire 1 ] xor1 $end
+$upscope $end
+$scope module fa3 $end
+$var wire 1 ^ A $end
+$var wire 1 _ B $end
+$var wire 1 P Cin $end
+$var wire 1 O Cout $end
+$var wire 1 ` Sum $end
+$var wire 1 a and1 $end
+$var wire 1 b and2 $end
+$var wire 1 c xor1 $end
+$upscope $end
+$scope module fa4 $end
+$var wire 1 d A $end
+$var wire 1 e B $end
+$var wire 1 O Cin $end
+$var wire 1 + Cout $end
+$var wire 1 f Sum $end
+$var wire 1 g and1 $end
+$var wire 1 h and2 $end
+$var wire 1 i xor1 $end
+$upscope $end
+$upscope $end
+$scope module fa3 $end
+$var wire 4 j A [3:0] $end
+$var wire 4 k B [3:0] $end
+$var wire 1 + Cin $end
+$var wire 4 l Sum [3:0] $end
+$var wire 1 m Cout2 $end
+$var wire 1 n Cout1 $end
+$var wire 1 o Cout0 $end
+$var wire 1 * Cout $end
+$scope module fa1 $end
+$var wire 1 p A $end
+$var wire 1 q B $end
+$var wire 1 + Cin $end
+$var wire 1 o Cout $end
+$var wire 1 r Sum $end
+$var wire 1 s and1 $end
+$var wire 1 t and2 $end
+$var wire 1 u xor1 $end
+$upscope $end
+$scope module fa2 $end
+$var wire 1 v A $end
+$var wire 1 w B $end
+$var wire 1 o Cin $end
+$var wire 1 n Cout $end
+$var wire 1 x Sum $end
+$var wire 1 y and1 $end
+$var wire 1 z and2 $end
+$var wire 1 { xor1 $end
+$upscope $end
+$scope module fa3 $end
+$var wire 1 | A $end
+$var wire 1 } B $end
+$var wire 1 n Cin $end
+$var wire 1 m Cout $end
+$var wire 1 ~ Sum $end
+$var wire 1 !" and1 $end
+$var wire 1 "" and2 $end
+$var wire 1 #" xor1 $end
+$upscope $end
+$scope module fa4 $end
+$var wire 1 $" A $end
+$var wire 1 %" B $end
+$var wire 1 m Cin $end
+$var wire 1 * Cout $end
+$var wire 1 &" Sum $end
+$var wire 1 '" and1 $end
+$var wire 1 (" and2 $end
+$var wire 1 )" xor1 $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0)"
+0("
+0'"
+0&"
+0%"
+0$"
+0#"
+0""
+0!"
+0~
+0}
+0|
+0{
+0z
+0y
+0x
+0w
+0v
+0u
+0t
+0s
+0r
+0q
+0p
+0o
+0n
+0m
+b0 l
+b0 k
+b0 j
+0i
+0h
+0g
+0f
+0e
+0d
+0c
+0b
+0a
+0`
+0_
+0^
+0]
+0\
+0[
+0Z
+0Y
+0X
+0W
+0V
+0U
+0T
+0S
+0R
+0Q
+0P
+0O
+b0 N
+b0 M
+b0 L
+0K
+0J
+0I
+0H
+0G
+0F
+0E
+0D
+0C
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+19
+08
+07
+16
+05
+14
+03
+02
+01
+b1 0
+0/
+b0 .
+b1 -
+0,
+0+
+0*
+b1 )
+bz000000000001 (
+b1 '
+b0 &
+b0 %
+b1 $
+b0 #
+b1 "
+b1 !
+$end
+#20
+1~
+1&"
+b1111111111 !
+b1111111111 )
+1r
+b1111 l
+1x
+1Z
+1`
+1f
+1<
+1B
+b1111 0
+1H
+bz111111111111 (
+b1111 N
+1T
+1#"
+1)"
+1u
+1{
+1]
+1c
+1i
+1?
+1E
+1K
+1W
+1}
+1%"
+1q
+1w
+1Y
+1_
+1e
+1:
+1@
+1F
+1R
+b1111 k
+b1110 M
+b1111 -
+b1 L
+b111111100000 &
+b1111100000 #
+b1111100000 %
+b11111 '
+b11111 "
+b11111 $
+#40
+0&"
+1*
+0~
+1'"
+1m
+0x
+1!"
+1n
+b0 l
+0r
+1y
+1o
+0f
+1s
+1+
+0`
+1g
+1O
+0Z
+1a
+1P
+b0 N
+0T
+1[
+1Q
+0H
+1U
+1,
+0B
+1I
+b0 !
+b0 )
+11
+06
+bz000000000000 (
+b0 0
+0<
+1C
+12
+09
+1=
+13
+0}
+0%"
+18
+1|
+1$"
+0q
+0w
+15
+0Y
+0_
+0e
+1p
+1v
+1X
+1^
+1d
+b0 k
+b1 .
+b0 M
+b1111 j
+b1111 L
+b1 &
+b1 #
+b1 %
+b111111111111 '
+b1111111111 "
+b1111111111 $
+#60
+1<
+1B
+b1110 0
+1H
+1T
+0&"
+b111110 !
+b111110 )
+0m
+0*
+b0 l
+0x
+1Z
+0`
+bz000000111110 (
+b11 N
+0f
+0=
+0C
+0I
+0U
+0!"
+0'"
+0o
+0n
+0P
+0O
+0+
+0?
+0E
+0K
+0W
+0#"
+0)"
+0s
+0y
+0[
+0a
+0g
+0u
+0{
+0]
+0c
+0i
+1>
+1D
+1J
+1V
+0|
+0$"
+1;
+1A
+1G
+1S
+0p
+0v
+0X
+0^
+0d
+b1111 .
+b1 M
+b0 j
+b1 L
+b11111 &
+b11111 #
+b11111 %
+b11111 '
+b11111 "
+b11111 $
+#80
+b1111 0
+16
+1~
+1&"
+b1111111111 !
+b1111111111 )
+1r
+b1111 l
+1x
+1`
+bz111111111111 (
+b1111 N
+1f
+19
+1?
+1E
+1K
+1W
+1#"
+1)"
+03
+02
+01
+0,
+0Q
+1u
+1{
+1]
+1c
+1i
+08
+0>
+0D
+0J
+0V
+1|
+1$"
+05
+0;
+0A
+0G
+0S
+1p
+1v
+1X
+1^
+1d
+b0 .
+b0 M
+b1111 j
+b1111 L
+b0 &
+b0 #
+b0 %
+b111111111111 '
+b1111111111 "
+b1111111111 $
+#100
