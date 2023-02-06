@@ -1,13 +1,12 @@
-<div align="center" >
+<div align="center">
     <a href="https://www.marmara.edu.tr" target="blank"><img align="center" alt="Discord" src="/icons/Marun_logo1.png" height="400"/></a>
     
   <br>
     
 # **Marmara University**
 # **Computer Science Engineering**   
-</div>
 
-<table>
+<table align="center">
   <tr>
     <td><a href="https://github.com/serkankorkut17/"><img src="/icons/user.png" width="50"></a></td>
     <td>Serkan Korkut</td>
@@ -22,6 +21,7 @@
   </tr>
 </table>
 
+</div>
 
 <!--
 <div>
