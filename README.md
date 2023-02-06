@@ -7,7 +7,9 @@
 # **Computer Science Engineering**   
 </div>
 <div>
-    |<img src="/icons/user.png" width="100">|<a href="https://github.com/serkankorkut17/">Serkan Korkut</a>|
-    |<img src="/icons/mail.png" width="100">|<a href="srknkrktgs@gmail.com">srknkrktgs@gmail.com</a>|
-    |<img src="/icons/link.png" width="100">|<a href="https://www.linkedin.com/in/serkankorkut17/">LinkedIn</a>|
+    <ul>
+        <li><img src="/icons/user.png" width="100"><a href="https://github.com/serkankorkut17/">Serkan Korkut</a></li>
+        <li><img src="/icons/mail.png" width="100"><a href="srknkrktgs@gmail.com">srknkrktgs@gmail.com</a></li>
+        <li><img src="/icons/link.png" width="100"><a href="https://www.linkedin.com/in/serkankorkut17/">LinkedIn</a></li>
+    </ul>
 </div>
