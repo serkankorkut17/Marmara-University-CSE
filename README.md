@@ -10,8 +10,8 @@
 
 <div style="vertical-align: middle">
     <ul>
-        <li><div><img src="/icons/user.png" width="50"><a href="https://github.com/serkankorkut17/">Serkan Korkut</a></div></li>
-        <li><div><img src="/icons/email.png" width="50"><a href="srknkrktgs@gmail.com">srknkrktgs@gmail.com</a></div></li>
-        <li><div><img src="/icons/linkedin.png" width="50"><a href="https://www.linkedin.com/in/serkankorkut17/">LinkedIn</a></div></li>
+        <li><div style="vertical-align: middle"><img src="/icons/user.png" width="50"><a href="https://github.com/serkankorkut17/">Serkan Korkut</a></div></li>
+        <li><div style="vertical-align: middle"><img src="/icons/email.png" width="50"><a href="srknkrktgs@gmail.com">srknkrktgs@gmail.com</a></div></li>
+        <li><div style="vertical-align: middle"><img src="/icons/linkedin.png" width="50"><a href="https://www.linkedin.com/in/serkankorkut17/">LinkedIn</a></div></li>
     </ul>
 </div>
