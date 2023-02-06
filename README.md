@@ -12,8 +12,8 @@
     <td>Serkan Korkut</td>
   </tr>
   <tr>
-    <td><a href="mailto:srknkrktgs@gmail.com"><img align="center" alt="EMail" src="/icons/email.png" width="100"></a></td>
-    <td>srknkrktgs@gmail.com</td>
+    <td><a href="mailto:serkankorkut@marun.edu.tr"><img align="center" alt="EMail" src="/icons/email.png" width="100"></a></td>
+    <td>serkankorkut@marun.edu.tr</td>
   </tr>
   <tr>
     <td><a href="https://www.linkedin.com/in/serkankorkut17/"><img align="center" alt="LinkedIn" src="/icons/linkedin.png" width="100"></a></a></td>
