@@ -7,7 +7,7 @@
 # **Computer Science Engineering**   
 </div>
 
-<table style="width: 100%; border: none;" cellspacing="0" cellpadding="0" border="0">
+<table>
   <tr>
     <td><a href="https://github.com/serkankorkut17/"><img src="/icons/user.png" width="50"></a></td>
     <td>Serkan Korkut</td>
