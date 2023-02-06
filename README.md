@@ -3,5 +3,7 @@
     
   <br>
     
-Marmara University<br>Computer Science Engineering
+# **Marmara University**
+    <br>
+# **Computer Science Engineering**
 </div>
