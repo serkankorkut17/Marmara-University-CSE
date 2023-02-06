@@ -13,3 +13,9 @@
         <div><img src="/icons/email.png" width="50"><a href="srknkrktgs@gmail.com">srknkrktgs@gmail.com</a></div>
         <div><img src="/icons/linkedin.png" width="50"><a href="https://www.linkedin.com/in/serkankorkut17/">LinkedIn</a></div>
 </div>
+
+<div>
+        <div><a href="https://github.com/serkankorkut17/" style= "color:red"><img src="/icons/user.png" width="50"></a><p>Serkan Korkut</p></div>
+        <div><a href="srknkrktgs@gmail.com"><img src="/icons/email.png" width="50"></a> **My email** </div>
+        <div><a href="https://www.linkedin.com/in/serkankorkut17/"><img src="/icons/linkedin.png" width="50"></a> **My LinkedIn**</div>
+</div>
