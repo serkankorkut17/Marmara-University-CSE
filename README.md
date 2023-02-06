@@ -15,7 +15,7 @@
 </div>
 
 <div>
-    <div><a href="https://github.com/serkankorkut17/" style= "color:red"><img src="/icons/user.png" width="50"></a><span>Serkan Korkut</span></div>
-    <div><a href="mailto:srknkrktgs@gmail.com"><img src="/icons/email.png" width="50"></a><span>srknkrktgs@gmail.com</span></div>
-    <div><a href="https://www.linkedin.com/in/serkankorkut17/"><img src="/icons/linkedin.png" width="50"></a><span>My LinkedIn</span></div>
+    <div><a href="https://github.com/serkankorkut17/" style= "color:red"><img src="/icons/user.png" width="30"></a><span>Serkan Korkut</span></div>
+    <div><a href="mailto:srknkrktgs@gmail.com"><img src="/icons/email.png" width="30"></a><span>srknkrktgs@gmail.com</span></div>
+    <div><a href="https://www.linkedin.com/in/serkankorkut17/"><img src="/icons/linkedin.png" width="30"></a><span>My LinkedIn</span></div>
 </div>
