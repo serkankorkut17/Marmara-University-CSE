@@ -6,8 +6,8 @@
 # **Marmara University**
 # **Computer Science Engineering**
     
-|<img src="/icons/user.png" width="100">|**Serkan Korkut**|
-|<img src="/icons/mail.png" width="100">|<a href="srknkrktgs@gmail.com">**srknkrktgs@gmail.com**</a>|
-|<img src="/icons/link.png" width="100">|<a href="https://www.linkedin.com/in/serkankorkut17/">**LinkedIn**</a>|
+<img src="/icons/user.png" width="100">   **Serkan Korkut**
+<img src="/icons/mail.png" width="100"><a href="srknkrktgs@gmail.com">**srknkrktgs@gmail.com**</a>
+<img src="/icons/link.png" width="100"><a href="https://www.linkedin.com/in/serkankorkut17/">**LinkedIn**</a>
     
 </div>
