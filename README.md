@@ -5,4 +5,7 @@
     
 # **Marmara University**
 # **Computer Science Engineering**
+    
+|---|---|
+|<i class="fi fi-sr-envelope"></i>|srknkrktgs@gmail.com|
 </div>
