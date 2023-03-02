@@ -1,5 +1,5 @@
 # **CSE3055 - Digital Logic Design**
-**CPU Design Project**
+# **CPU Design Project**
 
 |Student ID|Name|Surname|GitHub|
 |---|---|---|---|
