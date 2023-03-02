@@ -1,6 +1,7 @@
 <div align="center" >
 
 # **CSE3063 Object Oriented Software Design Project Fall 2022 <br>Group 6** 
+# **Student Registration System with Java and Python iterations**
 
 <img src="/CSE3063-Object-Oriented-Software-Design/icons/man.png" width="150">
 
