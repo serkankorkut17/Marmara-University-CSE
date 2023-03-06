@@ -17,7 +17,7 @@
   </tr>
   <tr>
     <td><a href="https://www.linkedin.com/in/serkankorkut17/"><img align="center" alt="LinkedIn" src="/icons/linkedin.png" width="100"></a></a></td>
-    <td>My LinkedIn</td>
+    <td><a href="https://www.linkedin.com/in/serkankorkut17/">My LinkedIn</a></td>
   </tr>
 </table>
 
