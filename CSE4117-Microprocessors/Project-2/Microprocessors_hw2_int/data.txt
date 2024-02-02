@@ -1,0 +1,91 @@
+.data
+.code
+      	   ldi 2 0xb00  
+      	   ldi 5 0x0001
+      	   st 2 5
+	   ldi 7 0xc8
+      	   ldi 0 0x7f2
+      	   ldi 1 isr
+      	   st  0 1
+      	   sti
+loop       ldi 3 0x801
+           ld 3 3
+	   ldi 4 0x0001
+           and 3 3 4
+           jz loop
+	   ldi 3 0x800
+           ld 3 3
+	   inc 5
+	   call bcd
+           st 2 6
+	   jmp loop
+isr   	   push 3
+	   ldi 3 0x900
+      	   ld 3 3
+      	   add 5 5 5
+	   call bcd
+      	   st 2 6
+      	   sti
+	   pop 3
+      	   iret
+bcd        push 2
+           push 3
+           push 4
+           ldi 3 13
+           ldi 6 0
+for        ldi 4 1
+           shl 6 6 4
+           shl 4 4 3
+           and 4 5 4
+           jz if1 
+           ldi 4 1
+           or 6 6 4
+if1        mov 3 3
+           jz bcd_end
+           ldi 4 0xf
+           and 4 4 6
+           ldi 2 0xc
+           and 2 4 2
+           jz if2
+           ldi 2 0xb
+           and 2 4 2
+           jz if2
+           ldi 2 3
+           add 6 6 2
+if2        ldi 4 0xf0
+           and 4 4 6
+           ldi 2 0xc0
+           and 2 4 2
+           jz if3
+           ldi 2 0xb0
+           and 2 4 2
+           jz if3
+           ldi 2 0x30
+           add 6 6 2
+if3        ldi 4 0xf00
+           and 4 4 6
+           ldi 2 0xc00
+           and 2 4 2
+           jz if4
+           ldi 2 0xb00
+           and 2 4 2
+           jz if4
+           ldi 2 0x300
+           add 6 6 2
+if4        ldi 4 0xf000
+           and 4 4 6
+           ldi 2 0xc000
+           and 2 4 2
+           jz if5
+           ldi 2 0xb000
+           and 2 4 2
+           jz if5
+           ldi 2 0x3000
+           add 6 6 2
+if5        ldi 2 1
+           sub 3 3 2
+           jmp for           
+bcd_end    pop 4
+           pop 3
+           pop 2
+           ret

@@ -1,0 +1,267 @@
+.data 
+           input: 0xf00 
+           sevenseg: 0xe00
+           intmask: 0xd00
+           timer: 0xc00
+           pb2: 0xb00
+           calc: 0xa00 
+.code 
+           ldi 7 0x700
+           ldi 0 0x7f0
+           ldi 1 isr_timer
+           st 0 1
+           ldi 0 0x7f1
+           ldi 1 pb2_isr
+           st 0 1
+           sti
+start      ldi 1 0
+           call read_int
+           mov 1 6
+           ldi 2 pb2
+           ld 2 2
+           ld 2 2
+           mov 2 2
+           jz while
+           push 5
+           mov 5 6
+           call bcd
+           ldi 2 sevenseg
+           ld 2 2
+           st 2 6
+           ldi 2 calc
+           ld 2 2
+           st 2 6
+           pop 5
+while      ldi 2 0xc
+           xor 2 2 5
+           jz out_while
+           mov 2 5
+           call read_int
+           ldi 3 0xf
+           xor 3 2 3
+           jz addx
+           ldi 3 0xe
+           xor 3 2 3
+           jz subx
+           ldi 3 0xd
+           xor 3 2 3
+           jz mulx
+mulx       call multiply
+           jmp end_while
+subx       sub 1 1 6
+           jmp end_while
+addx       add 1 1 6
+           jmp end_while
+end_while  ldi 2 pb2
+           ld 2 2
+           ld 2 2
+           mov 2 2
+           jz while
+           ldi 2 sevenseg
+           ld 2 2
+           push 5
+           push 6
+           mov 5 1
+           call bcd
+           st 2 6
+           ldi 2 calc
+           ld 2 2
+           st 2 6
+           pop 6
+           pop 5
+           jmp while
+out_while  ldi 2 pb2
+           ld 2 2
+           ld 2 2
+           mov 2 2
+           jz end
+           ldi 2 sevenseg
+           ld 2 2
+           push 5
+           push 6
+           mov 5 1
+           call bcd
+           st 2 6
+           ldi 2 calc
+           ld 2 2
+           st 2 6
+           pop 6
+           pop 5               
+end        jmp start 
+isr_timer  push 2
+           push 3
+           ldi 3 timer
+           ld 3 3
+           ld 3 3
+           mov 0 3
+           ldi 2 pb2
+           ld 2 2
+           ld 2 2
+           mov 2 2
+           jz timer_end
+           jmp endd
+timer_end  ldi 2 sevenseg
+           ld 2 2
+           push 5
+           push 6
+           mov 5 0
+           call bcd
+           st 2 6
+           pop 6
+           pop 5
+endd       pop 3
+           pop 2
+           sti
+           iret
+pb2_isr    push 2
+           ldi 2 pb2
+           ld 2 2
+           ld 2 2
+           mov 2 2
+           jz tm
+           ldi 2 sevenseg
+           ld 2 2
+           push 3
+           ldi 3 calc
+           ld 3 3
+           ld 3 3
+           st 2 3
+           pop 3
+           jmp enddd
+tm         ldi 2 sevenseg
+           ld 2 2
+           push 5
+           push 6
+           mov 5 0
+           call bcd
+           st 2 6
+           pop 6
+           pop 5
+enddd      pop 2
+           sti
+           iret
+read_int   push 2
+           push 3
+           push 4
+           ldi 5 input
+           ld 5 5
+           ldi 2 1
+           add 5 5 2
+           ldi 6 0
+loop       ld 2 5
+           mov 2 2
+           jz loop
+           ldi 3 1
+           sub 5 5 3
+           ld 2 5
+           ldi 3 0x8
+           and 3 2 3
+           jz cont
+           ldi 3 0x6
+           and 3 2 3
+           jz cont
+           jmp end_loop
+cont       ldi 3 3
+           push 5
+           shl 5 6 3
+           ldi 3 1
+           shl 4 6 3
+           add 6 5 4
+           add 6 6 2
+           mov 5 6
+           push 6
+           call bcd
+           ldi 5 sevenseg
+           ld 5 5
+           st 5 6
+           ldi 5 calc
+           ld 5 5
+           st 5 6
+           pop 6
+           pop 5
+           add 5 5 3
+           jmp loop
+end_loop   mov 5 2
+           pop 4
+           pop 3
+           pop 2
+           ret
+multiply   push 2
+           push 3
+           mov 3 1
+           ldi 2 0
+           mov 1 2
+           ldi 2 1
+           mov 6 6
+           jz zero
+           jmp mp_loop
+zero       ldi 1 0
+	   jmp emp
+mp_loop    add 1 1 3
+           sub 6 6 2
+           jz emp
+           jmp mp_loop
+emp        pop 3
+           pop 2
+           ret
+bcd        push 2
+           push 3
+           push 4
+           ldi 3 13
+           ldi 6 0
+for        ldi 4 1
+           shl 6 6 4
+           shl 4 4 3
+           and 4 5 4
+           jz if1 
+           ldi 4 1
+           or 6 6 4
+if1        mov 3 3
+           jz bcd_end
+           ldi 4 0xf
+           and 4 4 6
+           ldi 2 0xc
+           and 2 4 2
+           jz if2
+           ldi 2 0xb
+           and 2 4 2
+           jz if2
+           ldi 2 3
+           add 6 6 2
+if2        ldi 4 0xf0
+           and 4 4 6
+           ldi 2 0xc0
+           and 2 4 2
+           jz if3
+           ldi 2 0xb0
+           and 2 4 2
+           jz if3
+           ldi 2 0x30
+           add 6 6 2
+if3        ldi 4 0xf00
+           and 4 4 6
+           ldi 2 0xc00
+           and 2 4 2
+           jz if4
+           ldi 2 0xb00
+           and 2 4 2
+           jz if4
+           ldi 2 0x300
+           add 6 6 2
+if4        ldi 4 0xf000
+           and 4 4 6
+           ldi 2 0xc000
+           and 2 4 2
+           jz if5
+           ldi 2 0xb000
+           and 2 4 2
+           jz if5
+           ldi 2 0x3000
+           add 6 6 2
+if5        ldi 2 1
+           sub 3 3 2
+           jmp for           
+bcd_end    pop 4
+           pop 3
+           pop 2
+           ret

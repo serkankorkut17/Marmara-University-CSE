@@ -1,0 +1,4 @@
+Info (10281): Verilog HDL Declaration information at main_module.sv(20): object "SPACESHIP_X" differs only in case from object "spaceship_x" in the same scope
+Info (10281): Verilog HDL Declaration information at main_module.sv(21): object "SPACESHIP_Y" differs only in case from object "spaceship_y" in the same scope
+Info (10281): Verilog HDL Declaration information at main_module.sv(24): object "PLANET_X" differs only in case from object "planet_x" in the same scope
+Info (10281): Verilog HDL Declaration information at main_module.sv(25): object "PLANET_Y" differs only in case from object "planet_y" in the same scope

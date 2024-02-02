@@ -1,0 +1,41 @@
+module button_poll(
+    input clk,
+    input btn,
+    input a0,
+    input ack,
+    output reg [15:0] data_out,
+    output reg ack_sw
+);
+
+    reg pressed;
+    reg [15:0] status_reg; 
+    reg [15:0] data_reg ; 
+
+    always_ff @(posedge clk)
+    begin
+        pressed <= btn;
+        if (pressed && !status_reg[0])
+        begin
+             status_reg  <= 16'b1;
+             data_reg    <= 16'b0; // You can modify this to the desired value
+        end
+        else if (ack && !a0)
+        begin
+             status_reg <= 16'b0;
+        end
+    end
+
+    always_comb
+    begin
+        if (a0)
+            data_out = status_reg;
+        else
+            data_out = data_reg;
+    end
+
+    assign ack_sw = ack;
+
+    initial begin
+        status_reg = 16'b0;
+    end
+endmodule

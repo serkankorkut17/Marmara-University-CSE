@@ -1,0 +1,148 @@
+.data
+	spacex: 320
+	spacey: 240
+	planetx: 320
+	planety: 240
+	xspeed: 2
+	yspeed: 1
+.code
+	ldi 7 0xd2
+	ldi 0 0xdc
+	ldi 1 isr
+	st 0 1
+	ldi 5 planetx
+	ld 5 5
+	ldi 6 planety
+	ld 6 6
+	ldi 0 0x1fe
+	st 0 5
+	inc 0
+	st 0 6
+	ldi 5 spacex
+	ld 5 5
+	ldi 6 spacey
+	ld 6 6
+	ldi 0 0xfe
+	st 0 5
+	inc 0
+	st 0 6
+	sti
+loop	ldi 1 0xfc
+	ld 1 1
+	mov 1 1
+	jz loop
+	ldi 0 0xfd
+	ld 0 0
+	ldi 1 0x1d
+	ldi 3 0x110
+	st 3 0
+	xor 2 0 1
+	jz up
+	ldi 1 0x1b
+	xor 2 0 1
+	jz down
+	ldi 1 0x23
+	xor 2 0 1
+	jz right
+	ldi 1 0x1c
+	xor 2 0 1
+	jz left
+	jmp loop
+up      ldi 6 spacey
+	ld 5 6
+	ldi 0 4
+	sub 5 5 0
+	ldi 3 16
+	sub 3 5 3
+	jz loop
+	st 6 5
+	jmp loop
+down    ldi 6 spacey
+	ld 5 6
+	ldi 0 4
+	add 5 5 0
+	ldi 3 480
+	sub 3 5 3
+	jz loop
+	st 6 5
+	jmp loop
+left    ldi 6 spacex
+	ld 5 6
+	ldi 0 4
+	sub 5 5 0
+	jz loop
+	st 6 5
+	jmp loop
+right   ldi 6 spacex
+	ld 5 6
+	ldi 0 4
+	add 5 5 0
+	ldi 3 632
+	sub 3 5 3
+	jz loop
+	st 6 5
+	jmp loop
+isr	push 0
+	push 1
+	push 2
+	ldi 0 planetx
+	ld 0 0
+	ldi 1 xspeed
+	ld 1 1
+	add 0 0 1
+	ldi 2 632
+	sub 2 2 0
+	jz negx
+	ldi 2 0
+	sub 2 2 0
+	jz posx
+	ldi 1 planetx
+	st 1 0
+	ldi 1 0x1fe
+	st 1 0
+	jmp ychn
+negx	ldi 1 xspeed
+	ldi 2 0xfffe
+	st 1 2
+	jmp space
+posx    ldi 1 xspeed
+	ldi 2 2
+	st 1 2
+ychn    ldi 0 0x1ff
+	ld 0 0
+	ldi 1 yspeed
+	ld 1 1
+	add 0 0 1
+	ldi 2 480
+	sub 2 2 0
+	jz negy
+	ldi 2 0
+	sub 2 2 0
+	jz posy
+	ldi 1 0x1ff
+	st 1 0
+	jmp space
+negy	ldi 1 yspeed
+	ldi 2 0xffff
+	st 1 2
+	jmp space
+posy    ldi 1 yspeed
+	ldi 2 1
+	st 1 2
+space   ldi 0 0xfe
+	ldi 1 spacex
+	ld 1 1
+	st 0 1
+	ldi 0 0xff
+	ldi 1 spacey
+	ld 1 1
+	st 0 1
+	ldi 0 0xfe
+	ld 0 0
+	pop 2
+	pop 1
+	pop 0
+	sti
+	iret
+	
+	
